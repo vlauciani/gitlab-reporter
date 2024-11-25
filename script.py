@@ -89,7 +89,8 @@ def generate_report(gitlab_url, headers, start_date, end_date, users=None, proje
             logging.debug(f"{index}/{total_projects} - Skipping project {project['name']} (does not match filter).")
             continue
 
-        project_name_actual = project["name"]
+        #project_name_actual = project["name"]
+        project_name_actual = project["path_with_namespace"]
         project_id = project["id"]
         logging.info(f"{index}/{total_projects} - Fetching commits for project: {project_name_actual}")
         commits = get_commits(gitlab_url, headers, project_id, start_date, end_date, users=users)
