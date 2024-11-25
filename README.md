@@ -1,6 +1,7 @@
 # gitlab-reporter
 
-This is script designed to fetch and display a structured summary of commits from GitLab projects using the GitLab API. The output groups commits by project, showing the author, commit message, and timestamp.
+This script is designed to fetch and display a structured summary of commits from GitLab projects using the GitLab API. \
+The output groups commits by project, showing the author, commit message, and timestamp.
 
 Example:
 ```sh
