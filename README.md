@@ -5,7 +5,7 @@ The output groups commits by project, showing the author, commit message, and ti
 
 Example:
 ```sh
-Project: project_1
+Project: group_1/project_1
   - Author: user_1
     Message: Added Priority parameter. issue: #205
     Date: 2024-11-21T15:25:22.000+01:00
@@ -14,7 +14,7 @@ Project: project_1
     Message: Remove unused code
     Date: 2024-11-20T18:12:40.000+01:00
 
-Project: project_1
+Project: group_3/project_1
   - Author: user_1
     Message: Fix bug on Shop table
     Date: 2024-11-22T10:47:05.000+01:00
@@ -52,17 +52,17 @@ options:
 
 Generate a report for a specific date and user:
 ```sh
-docker run -it --rm -v $(pwd):/opt -w /opt python:3.12.5 bash -c "pip install -r requirements.txt && clear && python script.py -s 2024-11-22 -e 2024-11-22 -t <PERSONAL_ACCESS_TOKEN> -g https://gitlab.com -u mario.rossi@gmail.com"
+docker run -it --rm -v $(pwd):/opt -w /opt python:3.12.5 bash -c "pip install -r requirements.txt && clear && python script.py -s 2024-11-22 -e 2024-11-22 -t <PERSONAL_ACCESS_TOKEN> -g https://gitlab.com -u mario.rossi@mail.com"
 ```
 
 Generate a report for multiple projects and a specific user:
 ```sh
-docker run -it --rm -v $(pwd):/opt -w /opt python:3.12.5 bash -c "pip install -r requirements.txt && clear && python script.py -s 2024-11-22 -e 2024-11-22 -t <PERSONAL_ACCESS_TOKEN> -g https://gitlab.com -p proxysql,dante8 -u mario.rossi@gmail.com"
+docker run -it --rm -v $(pwd):/opt -w /opt python:3.12.5 bash -c "pip install -r requirements.txt && clear && python script.py -s 2024-11-22 -e 2024-11-22 -t <PERSONAL_ACCESS_TOKEN> -g https://gitlab.com -p proxysql,dante8 -u mario.rossi@mail.com"
 ```
 
-Generate a report for a single project:
+Generate a report for a single project and multiple users:
 ```sh
-docker run -it --rm -v $(pwd):/opt -w /opt python:3.12.5 bash -c "pip install -r requirements.txt && clear && python script.py -s 2024-11-22 -e 2024-11-22 -t <PERSONAL_ACCESS_TOKEN> -g https://gitlab.com -p bea"
+docker run -it --rm -v $(pwd):/opt -w /opt python:3.12.5 bash -c "pip install -r requirements.txt && clear && python script.py -s 2024-11-22 -e 2024-11-22 -t <PERSONAL_ACCESS_TOKEN> -g https://gitlab.com -u mario.rossi@mail.com,antonio.bianchi@mail.com -p bea"
 ```
 
 # Contribute
