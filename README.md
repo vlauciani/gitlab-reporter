@@ -74,6 +74,5 @@ Here is a list of users who already contributed to this repository: \
 </a>
 
 # Author
-(c) 2024 Valentino Lauciani valentino.lauciani[at]ingv.it
+(c) 2024 Valentino Lauciani vlauciani[at]gmail.com
 
-Istituto Nazionale di Geofisica e Vulcanologia, Italia
